@@ -1,0 +1,1 @@
+D:\Projects\Flutter\ModularApplicationExample\buildSrc\build\classes\kotlin\main\AppConfig.class;D:\Projects\Flutter\ModularApplicationExample\buildSrc\build\classes\kotlin\main\Dependencies.class;D:\Projects\Flutter\ModularApplicationExample\buildSrc\build\classes\kotlin\main\Versions.class
