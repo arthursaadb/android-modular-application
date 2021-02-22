@@ -35,5 +35,5 @@ object Dependencies {
     const val MOSHI_KTX = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     const val JUNIT = "junit:junit:${Versions.junit}"
     const val EXTJUNIT = "androidx.test.ext:junit:${Versions.extJunit}"
-    const val EXPRESSO = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val ESPRESSO = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 }
