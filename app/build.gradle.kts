@@ -49,6 +49,18 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE.txt")
+        exclude("META-INF/license.txt")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/NOTICE.txt")
+        exclude("META-INF/notice.txt")
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/*.kotlin_module")
+    }
 }
 
 dependencies {
@@ -73,10 +85,7 @@ dependencies {
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.PAGING)
     implementation(Dependencies.ROOM_RUNTIME)
-    implementation(Dependencies.ROOM_COMPILER)
-    implementation(Dependencies.HILT_PLUG_IN)
     implementation(Dependencies.HILT)
-    implementation(Dependencies.HILT_COMPILER)
     implementation(Dependencies.COIL)
     implementation(Dependencies.RETROFIT)
     implementation(Dependencies.RETROFIT_CONVERTER)
@@ -84,4 +93,8 @@ dependencies {
     implementation(Dependencies.JUNIT)
     implementation(Dependencies.EXTJUNIT)
     implementation(Dependencies.ESPRESSO)
+    implementation(Dependencies.COROUTINES_CORE)
+
+    kapt(Dependencies.HILT_COMPILER)
+    kapt(Dependencies.ROOM_COMPILER)
 }

@@ -42,6 +42,9 @@ object Versions {
     // moshi
     const val moshi = "1.11.0"
 
+    // okhttp
+    const val okhttp = "4.9.0"
+
     // test
     const val junit = "4.13.2"
     const val extJunit = "1.1.1"
