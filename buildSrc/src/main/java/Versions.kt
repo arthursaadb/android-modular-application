@@ -7,6 +7,7 @@ object Versions {
     const val appcompat = "1.2.0"
     const val material = "1.3.0"
     const val constraintLayout = "2.0.4"
+    const val cardview = "1.0.0"
 
     // ktx
     const val coreKtx = "1.3.2"

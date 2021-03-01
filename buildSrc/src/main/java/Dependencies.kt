@@ -4,6 +4,7 @@ object Dependencies {
     const val MATERIAL = "com.google.android.material:material:${Versions.material}"
     const val CONSTRAINT_LAYOUT =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val CARD_VIEW = "androidx.cardview:cardview:${Versions.cardview}"
     const val CORE_KTX = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val COLLECTION_KTX = "androidx.collection:collection-ktx:${Versions.collectionKtx}"
     const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"

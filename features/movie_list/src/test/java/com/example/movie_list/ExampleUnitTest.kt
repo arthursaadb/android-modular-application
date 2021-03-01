@@ -1,4 +1,4 @@
-package com.saad.features
+package com.example.movie_list
 
 import org.junit.Test
 

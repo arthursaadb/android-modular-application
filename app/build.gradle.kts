@@ -61,6 +61,11 @@ android {
         exclude("META-INF/ASL2.0")
         exclude("META-INF/*.kotlin_module")
     }
+
+    dynamicFeatures = mutableSetOf(
+        ":features:movie_list",
+        ":features:movie_favorites"
+    )
 }
 
 dependencies {
