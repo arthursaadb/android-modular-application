@@ -1,0 +1,2 @@
+com/saad/features/BuildConfig.java
+ com.saad.features.BuildConfig

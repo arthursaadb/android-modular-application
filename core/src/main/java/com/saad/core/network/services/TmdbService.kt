@@ -8,5 +8,5 @@ import retrofit2.http.Query
 
 interface TmdbService {
     @GET
-    fun getPopularMovies(@Query("page") page: Int): Resource<PopularMovieResponse>
+    suspend fun getPopularMovies(@Query("page") page: Int): Resource<PopularMovieResponse>
 }
