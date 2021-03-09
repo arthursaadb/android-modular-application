@@ -47,6 +47,7 @@ dependencies {
     implementation(Dependencies.OKHTTP)
     implementation(Dependencies.OKHTTP_LOGGING)
     implementation(Dependencies.COROUTINES)
+    implementation(Dependencies.PAGING)
 
     kapt(Dependencies.ROOM_COMPILER)
     kapt(Dependencies.HILT_COMPILER)

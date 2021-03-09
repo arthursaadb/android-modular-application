@@ -26,7 +26,7 @@ object Versions {
     const val coroutines = "1.3.9"
 
     // pagination
-    const val pagination = "2.1.2"
+    const val pagination = "3.0.0-beta01"
 
     // room
     const val room = "2.2.6"

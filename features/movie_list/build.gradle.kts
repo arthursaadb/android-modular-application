@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.APP_COMPAT)
     implementation(Dependencies.MATERIAL)

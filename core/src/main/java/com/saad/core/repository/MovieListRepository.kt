@@ -1,8 +1,9 @@
 package com.saad.core.repository
 
-import com.saad.core.network.Resource
-import com.saad.core.network.responses.PopularMovieResponse
+import androidx.paging.PagingData
+import com.saad.core.network.responses.MovieResponse
+import kotlinx.coroutines.flow.Flow
 
 interface MovieListRepository {
-    suspend fun getMovies(page: Int): Resource<PopularMovieResponse>
+    fun getMovies(page: Int): Flow<PagingData<MovieResponse>>
 }
