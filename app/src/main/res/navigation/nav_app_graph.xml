@@ -5,10 +5,21 @@
     android:id="@+id/nav_app_graph"
     app:startDestination="@id/movieListFragment">
 
+    <include app:graph="@navigation/nav_movie_favorite_graph" />
+
     <fragment
         android:id="@+id/movieListFragment"
         android:name="com.example.movie_list.MovieListFragment"
         android:label="movie_list_fragment"
         app:moduleName="ModularApplicationExample.features.movie_list"
-        tools:layout="@layout/movie_list_fragment" />
+        tools:layout="@layout/movie_list_fragment">
+
+        <action
+            android:id="@+id/action_movieListFragment_to_movieFavoriteFragment"
+            app:destination="@+id/nav_movie_favorite_graph"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
 </navigation>
