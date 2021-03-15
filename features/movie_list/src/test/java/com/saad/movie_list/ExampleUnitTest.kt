@@ -1,4 +1,4 @@
-package com.example.movie_favorites
+package com.saad.movie_list
 
 import org.junit.Test
 

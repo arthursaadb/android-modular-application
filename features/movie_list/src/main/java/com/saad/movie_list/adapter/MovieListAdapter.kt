@@ -1,12 +1,11 @@
-package com.example.movie_list.adapter
+package com.saad.movie_list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.NonNull
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movie_list.databinding.MovieListItemBinding
+import com.saad.movie_list.databinding.MovieListItemBinding
 import com.saad.core.network.responses.MovieResponse
 
 class MovieListAdapter :

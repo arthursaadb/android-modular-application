@@ -70,9 +70,12 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.APP_COMPAT)
     implementation(Dependencies.MATERIAL)
+    implementation(Dependencies.CARD_VIEW)
     implementation(Dependencies.CONSTRAINT_LAYOUT)
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.COLLECTION_KTX)
@@ -82,11 +85,11 @@ dependencies {
     implementation(Dependencies.NAVIGATION_KTX)
     implementation(Dependencies.NAVIGATION_FRAGMENT_KTX)
     implementation(Dependencies.NAVIGATION_UI_KTX)
-    implementation(Dependencies.ROOM_KTX)
     implementation(Dependencies.VIEWMODEL_KTX)
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
     implementation(Dependencies.NAVIGATION_MODULE)
+    implementation(Dependencies.PAGING)
     implementation(Dependencies.HILT)
     implementation(Dependencies.COIL)
     implementation(Dependencies.JUNIT)

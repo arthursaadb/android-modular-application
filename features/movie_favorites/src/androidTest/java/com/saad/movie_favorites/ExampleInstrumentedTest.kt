@@ -1,4 +1,4 @@
-package com.example.movie_favorites
+package com.saad.movie_favorites
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

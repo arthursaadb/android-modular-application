@@ -5,11 +5,9 @@
     android:id="@+id/nav_app_graph"
     app:startDestination="@id/movieListFragment">
 
-    <include app:graph="@navigation/nav_movie_favorite_graph" />
-
     <fragment
         android:id="@+id/movieListFragment"
-        android:name="com.example.movie_list.MovieListFragment"
+        android:name="com.saad.movie_list.MovieListFragment"
         android:label="movie_list_fragment"
         app:moduleName="ModularApplicationExample.features.movie_list"
         tools:layout="@layout/movie_list_fragment">

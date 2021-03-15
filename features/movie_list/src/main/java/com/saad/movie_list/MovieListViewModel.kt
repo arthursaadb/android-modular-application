@@ -1,4 +1,4 @@
-package com.example.movie_list
+package com.saad.movie_list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

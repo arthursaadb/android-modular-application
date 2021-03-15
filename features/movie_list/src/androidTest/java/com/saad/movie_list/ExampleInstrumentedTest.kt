@@ -1,4 +1,4 @@
-package com.example.movie_list
+package com.saad.movie_list
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

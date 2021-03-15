@@ -1,4 +1,4 @@
-package com.example.movie_list
+package com.saad.movie_list
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import com.example.movie_list.adapter.MovieListAdapter
-import com.example.movie_list.databinding.MovieListFragmentBinding
+import com.saad.movie_list.adapter.MovieListAdapter
+import com.saad.movie_list.databinding.MovieListFragmentBinding
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

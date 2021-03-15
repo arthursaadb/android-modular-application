@@ -1,4 +1,4 @@
-package com.example.movie_list.di
+package com.saad.movie_list.di
 
 import dagger.Module
 import dagger.hilt.InstallIn
