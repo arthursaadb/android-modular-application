@@ -31,8 +31,8 @@ object Versions {
     // room
     const val room = "2.2.6"
 
-    // hilt
-    const val hilt = "2.28-alpha"
+    // dagger
+    const val dagger = "2.33"
 
     // coil
     const val coil = "1.1.1"

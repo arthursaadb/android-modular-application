@@ -7,7 +7,7 @@ import okhttp3.Request
 import okhttp3.Response
 import javax.inject.Inject
 
-class ApiKeyInterceptor @Inject constructor() : Interceptor {
+class ApiKeyInterceptor: Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val original: Request = chain.request()
         val originalHttpUrl: HttpUrl = original.url

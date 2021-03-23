@@ -2,7 +2,6 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -39,7 +38,7 @@ dependencies {
     implementation(Dependencies.ROOM_RUNTIME)
     implementation(Dependencies.ROOM_KTX)
     implementation(Dependencies.CORE_KTX)
-    implementation(Dependencies.HILT)
+    implementation(Dependencies.DAGGER)
     implementation(Dependencies.RETROFIT)
     implementation(Dependencies.RETROFIT_CONVERTER)
     implementation(Dependencies.MOSHI)
@@ -50,5 +49,5 @@ dependencies {
     implementation(Dependencies.PAGING)
 
     kapt(Dependencies.ROOM_COMPILER)
-    kapt(Dependencies.HILT_COMPILER)
+    kapt(Dependencies.DAGGER_COMPILER)
 }

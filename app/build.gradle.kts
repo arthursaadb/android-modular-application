@@ -2,7 +2,6 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
 }
 
@@ -90,11 +89,11 @@ dependencies {
     api(Dependencies.NAVIGATION_UI)
     api(Dependencies.NAVIGATION_MODULE)
     api(Dependencies.PAGING)
-    api(Dependencies.HILT)
+    api(Dependencies.DAGGER)
     api(Dependencies.COIL)
     api(Dependencies.JUNIT)
     api(Dependencies.EXTJUNIT)
     api(Dependencies.ESPRESSO)
 
-    kapt(Dependencies.HILT_COMPILER)
+    kapt(Dependencies.DAGGER_COMPILER)
 }
