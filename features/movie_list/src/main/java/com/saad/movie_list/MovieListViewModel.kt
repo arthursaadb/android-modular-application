@@ -12,7 +12,7 @@ class MovieListViewModel(private val repository: MovieListRepository) : ViewMode
     private var currentPage = 0
     private var currentMovieResult: Flow<PagingData<MovieResponse>>? = null
 
-    fun getMovieList(page: Int): Flow<PagingData<MovieResponse>>? {
+    fun getMovieList(page: Int): Flow<PagingData<MovieResponse>> {
         val lastResult = currentMovieResult
 
         if (page == currentPage && lastResult != null) {

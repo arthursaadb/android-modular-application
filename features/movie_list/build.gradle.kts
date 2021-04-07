@@ -29,4 +29,6 @@ android {
 
 dependencies {
     implementation(project(":app"))
+
+    kapt(Dependencies.DAGGER_COMPILER)
 }

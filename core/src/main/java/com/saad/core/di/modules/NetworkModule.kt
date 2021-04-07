@@ -49,5 +49,17 @@ object NetworkModule {
 
     @Singleton
     @Provides
+    fun providesMoviePagingSource(tmdbService: TmdbService): MoviePagingSource =
+        MoviePagingSource(tmdbService)
+
+    @Singleton
+    @Provides
+    fun providesMovieListRepository(moviePagingSource: MoviePagingSource): MovieListRepository =
+        MovieListRepositoryImpl(moviePagingSource)
+
+    @Singleton
+    @Provides
     fun providesService(retrofit: Retrofit): TmdbService = retrofit.create(TmdbService::class.java)
+
+
 }

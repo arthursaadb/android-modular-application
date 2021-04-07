@@ -1,44 +1,53 @@
 package com.saad.movie_list
 
-import androidx.lifecycle.ViewModelProvider
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.lifecycleScope
+import androidx.fragment.app.Fragment
+import com.saad.modularapplicationexample.MovieApplication
 import com.saad.movie_list.adapter.MovieListAdapter
 import com.saad.movie_list.databinding.MovieListFragmentBinding
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
+import com.saad.movie_list.di.DaggerMovieListComponent
+import javax.inject.Inject
 
 class MovieListFragment : Fragment() {
-    private lateinit var binding: MovieListFragmentBinding
-    private lateinit var viewModel: MovieListViewModel
+    private var _binding: MovieListFragmentBinding? = null
+    private val binding: MovieListFragmentBinding = _binding!!
     private lateinit var adapter: MovieListAdapter
-    private var searchJob: Job? = null
+
+    @Inject
+    lateinit var viewModel: MovieListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.movie_list_fragment, container, false)
+    ): View {
+        _binding = MovieListFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MovieListViewModel::class.java)
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        initDependencyInjection()
     }
 
-    fun getMovies(page: Int) {
-        searchJob?.cancel()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
 
-        searchJob = lifecycleScope.launch {
-            viewModel.getMovieList(page)?.collectLatest {
-                adapter.submitData(it)
-            }
-        }
+    private fun initDependencyInjection() {
+        DaggerMovieListComponent
+            .builder()
+            .coreComponent(MovieApplication.coreComponent(this.requireContext()))
+            .build()
+            .inject(this)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
