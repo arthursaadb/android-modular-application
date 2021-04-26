@@ -6,6 +6,8 @@ import com.saad.core.network.services.TmdbService
 import com.saad.core.paging.MoviePagingSource
 import com.saad.core.repository.MovieListRepository
 import com.saad.core.repository.MovieListRepositoryImpl
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -15,7 +17,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 @Module
-object NetworkModule {
+object CoreModule {
     @Singleton
     @Provides
     fun providesHttpLoggingInterceptor(): HttpLoggingInterceptor =
@@ -41,10 +43,18 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providesRetrofit(): Retrofit =
+    fun providesMoshi(): Moshi =
+        Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
+
+    @Singleton
+    @Provides
+    fun providesRetrofit(okHttpClient: OkHttpClient, moshi: Moshi): Retrofit =
         Retrofit.Builder()
             .baseUrl(BuildConfig.TMDB_API_BASE_URL)
-            .addConverterFactory(MoshiConverterFactory.create())
+            .client(okHttpClient)
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
 
     @Singleton

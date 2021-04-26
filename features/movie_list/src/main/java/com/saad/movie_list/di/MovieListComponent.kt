@@ -2,7 +2,7 @@ package com.saad.movie_list.di
 
 import com.saad.core.di.CoreComponent
 import com.saad.core.di.scopes.FeatureScope
-import com.saad.movie_list.MovieListFragment
+import com.saad.movie_list.presentation.MovieListFragment
 import com.saad.movie_list.di.modules.MovieListModule
 import dagger.Component
 

@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.saad.core.di.CoreComponent
 import com.saad.core.di.DaggerCoreComponent
+import com.saad.core.di.modules.CoreModule
 import com.saad.modularapplicationexample.di.DaggerAppComponent
 
 class MovieApplication : Application() {
@@ -11,19 +12,23 @@ class MovieApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
         initCoreDependencyInjection()
         initAppDependencyInjection()
     }
 
-    private fun initCoreDependencyInjection() {
+    private fun initAppDependencyInjection() {
         DaggerAppComponent.builder()
             .coreComponent(coreComponent)
             .build()
             .inject(this)
     }
 
-    private fun initAppDependencyInjection() {
-        coreComponent = DaggerCoreComponent.builder().build()
+    private fun initCoreDependencyInjection() {
+        coreComponent = DaggerCoreComponent
+            .builder()
+            .coreModule(CoreModule)
+            .build()
     }
 
     companion object {

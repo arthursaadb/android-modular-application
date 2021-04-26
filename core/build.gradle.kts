@@ -15,7 +15,7 @@ android {
     }
 
     buildTypes.forEach {
-        it.buildConfigField("String", "TMDB_API_BASE_URL", "\"https://api.themoviedb.org/\"")
+        it.buildConfigField("String", "TMDB_API_BASE_URL", "\"https://api.themoviedb.org/3/\"")
         it.buildConfigField("String", "API_KEY", "\"8be89195a64206c889833492c39467e9\"")
     }
 
@@ -41,6 +41,7 @@ dependencies {
     implementation(Dependencies.DAGGER)
     implementation(Dependencies.RETROFIT)
     implementation(Dependencies.RETROFIT_CONVERTER)
+    implementation(Dependencies.MOSHI_CODEGEN)
     implementation(Dependencies.MOSHI)
     implementation(Dependencies.MOSHI_KTX)
     implementation(Dependencies.OKHTTP)

@@ -6,8 +6,6 @@ import com.saad.core.network.responses.MovieResponse
 import com.saad.core.network.services.TmdbService
 import retrofit2.HttpException
 import java.io.IOException
-import java.lang.Exception
-import javax.inject.Inject
 
 private const val MOVIE_PAGING_START_INDEX = 1
 
@@ -21,13 +19,13 @@ class MoviePagingSource(private val service: TmdbService) : PagingSource<Int, Mo
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, MovieResponse> {
         val position = params.key ?: MOVIE_PAGING_START_INDEX
         val response = service.getPopularMovies(position)
-        val movies = response.data?.movieResponses
+        val movies = response.movies
 
         return try {
             val nextIndex = if (movies.isNullOrEmpty()) {
                 null
             } else {
-                params.key?.inc()
+                position + params.loadSize
             }
 
             LoadResult.Page(

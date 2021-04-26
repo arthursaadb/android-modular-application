@@ -5,5 +5,5 @@ import com.saad.core.network.responses.MovieResponse
 import kotlinx.coroutines.flow.Flow
 
 interface MovieListRepository {
-    fun getMovies(page: Int): Flow<PagingData<MovieResponse>>
+    fun getMovies(): Flow<PagingData<MovieResponse>>
 }

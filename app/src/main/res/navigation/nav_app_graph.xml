@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_app_graph"
-    app:startDestination="@id/movieListFragment">
+    app:startDestination="@id/list_nav_graph">
 
-    <fragment
-        android:id="@+id/movieListFragment"
-        android:name="com.saad.movie_list.MovieListFragment"
-        android:label="movie_list_fragment"
-        app:moduleName="ModularApplicationExample.features.movie_list"
-        tools:layout="@layout/movie_list_fragment" />
+    <include-dynamic
+        android:id="@+id/list_nav_graph"
+        app:moduleName="movie_list"
+        app:graphResName="list_graph"
+        app:graphPackage="com.saad.modularapplicationexample.movie_list"/>
+
+    <include-dynamic
+        android:id="@+id/favorites_nav_graph"
+        app:moduleName="movie_favorites"
+        app:graphResName="favorites_graph"
+        app:graphPackage="com.saad.modularapplicationexample.movie_favorites"/>
+
+    <include-dynamic
+        android:id="@+id/profile_nav_graph"
+        app:moduleName="profile"
+        app:graphResName="profile_nav"
+        app:graphPackage="com.saad.modularapplicationexample.profile"/>
 </navigation>

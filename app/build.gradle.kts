@@ -64,7 +64,8 @@ android {
 
     dynamicFeatures = mutableSetOf(
         ":features:movie_list",
-        ":features:movie_favorites"
+        ":features:movie_favorites",
+        ":features:profile"
     )
 }
 

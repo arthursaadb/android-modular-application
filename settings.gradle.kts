@@ -2,8 +2,9 @@ include(
     ":app",
     ":core",
     ":features",
+    ":features:movie_list",
     ":features:movie_favorites",
-    ":features:movie_list"
+    ":features:profile"
 )
 
 rootProject.name = "ModularApplicationExample"

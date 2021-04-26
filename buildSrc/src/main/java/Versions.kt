@@ -20,7 +20,7 @@ object Versions {
     const val viewModelKtx = "2.3.0"
 
     // navigation
-    const val navigation = "2.3.3"
+    const val navigation = "2.3.1"
 
     // coroutines
     const val coroutines = "1.3.9"
@@ -41,7 +41,7 @@ object Versions {
     const val retrofit = "2.9.0"
 
     // moshi
-    const val moshi = "1.11.0"
+    const val moshi = "1.12.0"
 
     // okhttp
     const val okhttp = "4.9.0"

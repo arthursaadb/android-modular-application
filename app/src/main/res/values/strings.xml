@@ -2,4 +2,6 @@
     <string name="app_name">ModularApplicationExample</string>
     <string name="title_movie_list">Movie List</string>
     <string name="title_movie_favorites">Movies Favorites</string>
+    <string name="title_favorites">Favorite Movies</string>
+    <string name="title_profile">Profile</string>
 </resources>
